@@ -32,12 +32,8 @@ def main():
     args = sys.argv[1:]
     if args[2]:
       all_instances_with_ips = get_instance_list(args[0], args[1], args[2])
-      print '\n' + args[2]
-      print '-'*len(args[2]) + '\n'
-      print 'Instance:  IP:'
-      print '---------  ---'
       for inst in all_instances_with_ips:
-        print inst[0], inst[1]
+        print inst[1]
     else:
       raise Exception('IndexError')
       sys.exit(1)
